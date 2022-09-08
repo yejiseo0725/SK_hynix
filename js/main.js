@@ -1,8 +1,29 @@
 $(function () {
   const pause = $(".visual .video-area .video-btns button:first-child");
   const play = $(".visual .video-area .video-btns button:last-child");
+  const video = $(".video-area video").get(0);
 
-  pause.click(function () {});
+  pause.click(function () {
+    video.pause();
+
+    pause.css({
+      display: "none",
+    });
+    play.css({
+      display: "block",
+    });
+  });
+
+  play.click(function () {
+    video.play();
+
+    play.css({
+      display: "none",
+    });
+    pause.css({
+      display: "block",
+    });
+  });
 
   $(".news .news-slider").slick({
     dots: false,

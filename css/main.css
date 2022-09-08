@@ -34,8 +34,6 @@
 	width: 65px;
 	height: 65px;
 	transform: translate(-50%, -50%);
-
-	border: 3px solid tomato;
 }
 .visual .video-area .video-btns button {
 	position: absolute;
@@ -62,16 +60,11 @@
 	object-fit: cover;
 }
 .visual .video-area .video-btns button:last-child img {
-	left: 55%;
-}
-
-.visual .video-area .video-btns button:first-child.none {
-	/* pause btn */
-	display: none;
+	left: 54%;
 }
 .visual .video-area .video-btns button:last-child {
 	/* play btn */
-	/* display: none; */
+	display: none;
 }
 
 .visual .video-area img {
