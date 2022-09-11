@@ -33,6 +33,27 @@ h6 {
   font-weight: 300;
 }
 
+.top-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 30;
+}
+.top-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
 /* Header */
 .header {
   display: flex;
