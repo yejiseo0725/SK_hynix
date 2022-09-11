@@ -1,7 +1,7 @@
 .layout {
 	position: relative;
 	min-width: 1600px;
-	max-width: 1920px;
+	width: 100%;
 	margin: auto;
 	padding-top: 80px;
 }
@@ -72,6 +72,65 @@
 	bottom: 37px;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+
+.visual .mouse {
+	position: absolute;
+	left: 50%;
+	bottom: 6%;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 45px;
+	border: 3px solid #fff;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+.visual .mouse .mouse-scroll {
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 9px;
+	border-radius: 10px;
+	background-color: #fff;
+
+	animation: scroll1 1.3s linear infinite;
+}
+@keyframes scroll1 {
+	0% { transform: translateY(0) translateX(-50%); }
+	100% { transform: translateY(13px) translateX(-50%);}
+}
+
+.visual .down {
+	position: absolute;
+	left: 50%;
+	bottom: 2%;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 30px;
+
+	animation: scroll2 1.3s linear infinite;
+}
+.visual .down img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+@keyframes scroll2 {
+	0% {
+		opacity: 1;
+		transform: translateY(0) translateX(-50%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(10px) translateX(-50%);
+	}
 }
 
 /* Operation */
@@ -493,6 +552,7 @@
 @media (max-width: 768px) {
 	.layout {
 		min-width: auto;
+		padding-top: 30px;
 	}
 	
 	.main {
