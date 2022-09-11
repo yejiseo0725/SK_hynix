@@ -32,6 +32,7 @@ $(function () {
     arrows: true,
     prevArrow: $(".news .left-btn"),
     nextArrow: $(".news .right-btn"),
+    centerMode: true,
     responsive: [
       //반응형 적용여부
       {
@@ -82,4 +83,22 @@ $(function () {
 
     lastScrollTop = st;
   }
+
+  const topIcon = $(".top-icon");
+  const footer = $(".footer").offset().top;
+
+  $(window).scroll(function () {
+    const now = $(this).scrollTop();
+    const nowScrollTop = parseInt(now);
+
+    if (nowScrollTop >= 1) {
+      topIcon.css({
+        position: "fixed",
+      });
+    } else if (nowScrollTop === 0) {
+      topIcon.css({
+        position: "",
+      });
+    }
+  });
 });
